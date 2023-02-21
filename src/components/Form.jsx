@@ -62,7 +62,7 @@ const Form = () => {
                 <input type="password" name="password" value={user.password} onChange={changeHandler} />
             </div>
             <div>
-                {user.confirmPassword && user.confirmPassword.length < 8 ? <p>Password is required and must be 8 or more characters </p>: ""}
+                {user.confirmPassword != user.password ? <p>Passwords must match </p>: ""}
                 <label>Password: </label> 
                 <input type="password" name="confirmPassword" value={user.confirmPassword} onChange={changeHandler} />
             </div>
